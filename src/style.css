@@ -23,10 +23,21 @@ header {
   justify-content: space-between;
   gap: 1rem;
 }
+header #menu-btn {
+  display: none;
+}
+header .logo {
+  top: 3rem;
+  left: 48.5%;
+}
+header .logo img {
+  width: 8rem;
+}
 header .navbar a {
   font-size: 1.2rem;
-  margin: 0 2rem;
+  margin: 0 1rem;
   color: #4F4F4F;
+  margin-right: 80px;
 }
 header .navbar #btn {
   margin-left: 5rem;
@@ -35,14 +46,6 @@ header .navbar #btn {
   padding: 0.2rem 3rem;
   border-radius: 50px;
   font-weight: bold;
-}
-header .navbar .logo {
-  top: 3rem;
-  left: 48.5%;
-  transform: translateX(-50%);
-}
-header .navbar .logo img {
-  width: 8rem;
 }
 
 /*  Media queris */
@@ -56,17 +59,32 @@ header .navbar .logo img {
     justify-content: flex-end;
     gap: 2rem;
   }
+  .header #menu-btn {
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .header #menu-btn:hover {
+    color: #777777;
+  }
+  .header .logo {
+    display: block;
+    width: 100%;
+    margin-left: 2rem;
+    left: 0%;
+    transform: translateX(0%);
+  }
   .header .navbar {
     position: absolute;
     top: 99%;
     left: 0;
     right: 0;
     background: #F9F4F4;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
-  .header .navbar .logo {
-    display: block;
-    margin: rem 2rem;
-    transform: translateX(0%);
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .header .navbar #btn {
     margin: 4% 2rem;

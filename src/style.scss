@@ -1,6 +1,7 @@
 
 
 $primarycolor:#F9F4F4;
+$secondarycolor: rgb(119, 119, 119);
 $black : #000;
 $fontcolor: #4F4F4F;
 $border:.2rem solid rgba(255,255,255,.3);
@@ -27,12 +28,24 @@ $border:.2rem solid rgba(255,255,255,.3);
     justify-content: space-between;
     gap:1rem;
 
+    #menu-btn{
+        display: none;
+    }
 
+    .logo{
+        top:3rem; left:48.5%;
+        
+  
+        img{
+           width: 8rem;
+        }
+    }
     .navbar{
         a{
          font-size: 1.2rem;
-         margin:0 2rem;
+         margin:0 1rem;
          color: $fontcolor;
+         margin-right: 80px;
         }
         #btn{
             margin-left: 5rem;
@@ -41,14 +54,6 @@ $border:.2rem solid rgba(255,255,255,.3);
             padding:0.2rem 3rem;
             border-radius: 50px;
             font-weight: bold;
-        }
-        .logo{
-            top:3rem; left:48.5%;
-            transform: translateX(-50%);
-      
-            img{
-               width: 8rem;
-            }
         }
     }
     
@@ -71,17 +76,35 @@ $border:.2rem solid rgba(255,255,255,.3);
     .header{
         justify-content: flex-end;
         gap:2rem;
+
+        #menu-btn{
+            display: inline-block;
+            margin-left: 2rem;
+            font-size: 2rem;
+            cursor: pointer;
+            &:hover{
+                color:$secondarycolor;
+            }
+        }
+
+        .logo{
+            display: block;
+            width: 100%;
+            margin-left: 2rem;
+            left: 0%;
+            transform: translateX(0%);
+        }
         .navbar{
            position: absolute;
            top:99%; left:0; right:0;
            background: $primarycolor;
-           
-           .logo{
-               display: block;
-               margin:rem 2rem;
-               transform: translateX(0%);
+           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
+           &.active{
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
            }
+  
+
            #btn{
                margin: 4% 2rem;
                width: 250px;
