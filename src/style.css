@@ -1,0 +1,89 @@
+* {
+  font-family: "Roboto", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #F9F4F4;
+  padding: 1rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+header .navbar a {
+  font-size: 1.2rem;
+  margin: 0 2rem;
+  color: #4F4F4F;
+}
+header .navbar #btn {
+  margin-left: 5rem;
+  background: #000;
+  color: #F9F4F4;
+  padding: 0.2rem 3rem;
+  border-radius: 50px;
+  font-weight: bold;
+}
+header .navbar .logo {
+  top: 3rem;
+  left: 48.5%;
+  transform: translateX(-50%);
+}
+header .navbar .logo img {
+  width: 8rem;
+}
+
+/*  Media queris */
+@media (max-width: 1200px) {
+  .header {
+    padding: 1rem;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #F9F4F4;
+  }
+  .header .navbar .logo {
+    display: block;
+    margin: rem 2rem;
+    transform: translateX(0%);
+  }
+  .header .navbar #btn {
+    margin: 4% 2rem;
+    width: 250px;
+  }
+  .header .navbar #btn a {
+    font-size: 1px;
+    display: flex;
+  }
+  .header .navbar a {
+    display: block;
+    margin: 0.5rem 2rem;
+    padding: 1rem;
+  }
+  .header .navbar a:hover {
+    background-color: #ffff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
