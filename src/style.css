@@ -16,7 +16,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #F9F4F4;
+  background-color: #f9f4f4;
   padding: 1rem 9%;
   display: flex;
   align-items: center;
@@ -39,6 +39,11 @@ header .navbar a {
   color: #4F4F4F;
   margin-right: 80px;
 }
+header .navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: #000;
+}
 header .navbar #btn {
   margin-left: 5rem;
   background: #000;
@@ -48,10 +53,53 @@ header .navbar #btn {
   font-weight: bold;
 }
 
+.content {
+  display: flex;
+  height: 550px;
+  background-color: #D0AEAE;
+}
+.content .slide {
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0.336);
+  opacity: 1%;
+  justify-content: center;
+}
+.content .slide #flecha {
+  width: 100%;
+}
+.content .auto {
+  width: 80%;
+  padding: 20px;
+  margin: 4rem 2%;
+  text-align: center;
+}
+.content .auto img {
+  width: 70%;
+}
+.content .auto p {
+  font-family: "Rajdhani", sans-serif;
+  line-height: 100px;
+  width: 70%;
+  height: 20%;
+  font-size: 7rem;
+  text-align: left;
+  color: white;
+  margin-top: 5px;
+  transform: translateY(-10rem);
+  z-index: 1000;
+}
+
 /*  Media queris */
 @media (max-width: 1200px) {
   .header {
     padding: 1rem;
+  }
+
+  .content {
+    height: 400px;
+  }
+  .content .auto p {
+    font-size: 4rem;
   }
 }
 @media (max-width: 991px) {
@@ -80,7 +128,7 @@ header .navbar #btn {
     top: 99%;
     left: 0;
     right: 0;
-    background: #F9F4F4;
+    background: #f9f4f47a;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .navbar.active {

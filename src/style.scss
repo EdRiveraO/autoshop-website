@@ -1,8 +1,10 @@
 
 
-$primarycolor:#F9F4F4;
+$primarycolor:#f9f4f4;
+$navbarcolor:#f9f4f47a;
 $secondarycolor: rgb(119, 119, 119);
 $black : #000;
+$slidecolor: rgba(0, 0, 0, 0.336);
 $fontcolor: #4F4F4F;
 $border:.2rem solid rgba(255,255,255,.3);
 
@@ -27,7 +29,6 @@ $border:.2rem solid rgba(255,255,255,.3);
     align-items: center;
     justify-content: space-between;
     gap:1rem;
-
     #menu-btn{
         display: none;
     }
@@ -46,6 +47,12 @@ $border:.2rem solid rgba(255,255,255,.3);
          margin:0 1rem;
          color: $fontcolor;
          margin-right: 80px;
+
+         &:hover{
+             text-decoration: underline;
+             text-underline-offset: .5rem;
+             color:$black
+         }
         }
         #btn{
             margin-left: 5rem;
@@ -59,6 +66,42 @@ $border:.2rem solid rgba(255,255,255,.3);
     
  }
 
+ .content{
+     display: flex;
+     height: 550px;
+     background-color: #D0AEAE;
+     .slide{
+         width: 10%;
+         background-color: $slidecolor;
+         opacity: 1%;
+         justify-content: center;
+         #flecha{
+             width: 100%;
+         }
+     }
+     .auto{
+         width: 80%;
+         padding: 20px;
+         margin: 4rem 2%;
+         text-align: center;
+         img{
+            width: 70%;
+        }   
+        p{
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 100px;
+            width: 70%;
+            height: 20%;
+            font-size: 7rem;
+            text-align: left;
+            color: white;
+            margin-top: 5px;
+            transform: translateY(-10rem);
+            z-index: 1000;
+        }
+     }
+ }
+
 
 /*  Media queris */
 
@@ -66,6 +109,14 @@ $border:.2rem solid rgba(255,255,255,.3);
 
     .header{
        padding:1rem;
+    }
+    .content{
+        height: 400px;
+        .auto{
+            p{
+                font-size: 4rem;
+            }
+        }
     }
  
  
@@ -97,7 +148,7 @@ $border:.2rem solid rgba(255,255,255,.3);
         .navbar{
            position: absolute;
            top:99%; left:0; right:0;
-           background: $primarycolor;
+           background: $navbarcolor;
            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
            &.active{
