@@ -63,7 +63,7 @@ header .navbar #btn {
   padding: 5px;
   align-items: center;
   width: 100%;
-  background-color: #de955f;
+  /* background-color: $backgroundcolor; */
 }
 .principal #slideshow img {
   position: absolute;
@@ -77,6 +77,17 @@ header .navbar #btn {
 }
 .principal #slideshow #img2 .active {
   left: 0 !important;
+}
+.principal #slideshow .titulo {
+  font-family: "Rajdhani", sans-serif;
+  line-height: 90px;
+  font-size: 8rem;
+  text-align: left;
+  margin-left: 20px;
+  color: white;
+  position: absolute;
+  bottom: 50px;
+  z-index: 1000;
 }
 .principal #indicadores {
   width: 100%;
@@ -119,10 +130,18 @@ z-index: 1000; */
   .principal #slideshow {
     height: 500px;
   }
+  .principal #slideshow .titulo {
+    font-size: 6rem;
+  }
 }
 @media (max-width: 991px) {
   .principal #slideshow {
     height: 400px;
+  }
+  .principal #slideshow .titulo {
+    font-size: 2rem;
+    line-height: 30px;
+    bottom: 80px;
   }
 
   .header {

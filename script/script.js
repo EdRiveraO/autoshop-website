@@ -3,6 +3,8 @@ let navbar = document.querySelector('.header .navbar');
 let contenPr = document.querySelector('.principal');
 let Slides = document.querySelectorAll('.slide');
 let slideshowc = document.querySelector('.principal #slideshow');
+let carTitle = document.querySelector('.titulo');
+
 
 contenPr.onmouseover=()=>{ 
    /* Slides[0].style.opacity= "1";
@@ -27,9 +29,11 @@ addEventListener('DOMContentLoaded', ()=>{
    const imagenes =['./img/car.png','./img/car1.png',
    './img/car2.png','./img/car4.png']
 
+   const titulos =['TOYOTA </br> ILUX 2018','SUZUKI  </br>SWIFT 2019',
+   'HONDA  </br> CIVIC 2018','RENAULT  </br> KWID 2016']
+
 
    let i =1
-   let slide =document.querySelector('.auto');
 
    const img1 = document.getElementById('img1')
    const img2 = document.getElementById('img2')
@@ -45,6 +49,7 @@ addEventListener('DOMContentLoaded', ()=>{
       i=div.id;
 
       img2.src = imagenes[i]
+      carTitle.innerHTML=titulos[i];
       const circulo_actual= Array.from(circulos).find(el => el.id ==i)
       Array.from(circulos).forEach(cir => cir.classList.remove('resaltado'))
       circulo_actual.classList.add('resaltado')
@@ -55,24 +60,27 @@ addEventListener('DOMContentLoaded', ()=>{
          i=0
       }
          img1.src = img2.src
-         img1.src = img2.src
          img2.classList.remove('active')
-
          rgb= getAverageRGB(img2);
-         slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')';
+         slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')'  
 
       })
 
 
    }
    img1.src =imagenes[0]
+   rgb= getAverageRGB(img1);
+   slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')'
    const circulos= document.querySelectorAll('.circles')
    circulos[0].classList.add('resaltado')
    
 
    const slideshow = ()=>{
-      
-      img2.src = imagenes[i]
+      console.log(carTitle.innerHTML);
+      carTitle.innerHTML=titulos[i];
+
+
+      img2.src = imagenes[i];
       const circulo_actual= Array.from(circulos).find(el => el.id ==i)
       Array.from(circulos).forEach(cir => cir.classList.remove('resaltado'))
       circulo_actual.classList.add('resaltado')
@@ -86,6 +94,9 @@ addEventListener('DOMContentLoaded', ()=>{
       setTimeout(() =>{
          img1.src = img2.src
          img2.classList.remove('active')
+
+         rgb= getAverageRGB(img1);
+         slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')';
 
          rgb= getAverageRGB(img2);
          slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')';

@@ -76,7 +76,7 @@ $border:.2rem solid rgba(255,255,255,.3);
         padding: 5px;
         align-items: center;
         width: 100%;
-        background-color: $backgroundcolor;
+        /* background-color: $backgroundcolor; */
         img{
             position: absolute;
             height: 100%;
@@ -89,6 +89,17 @@ $border:.2rem solid rgba(255,255,255,.3);
             .active{
                 left: 0 !important;
             }
+        }
+        .titulo{
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 90px;
+            font-size: 8rem;
+            text-align: left;
+            margin-left: 20px;
+            color: white;
+            position: absolute;
+            bottom: 50px;
+            z-index: 1000;
         }
     }
     #indicadores{
@@ -134,7 +145,11 @@ $border:.2rem solid rgba(255,255,255,.3);
     .principal{
         #slideshow{
             height: 500px;
+            .titulo{
+                font-size: 6rem;
+            }
         }
+        
     }
  
  
@@ -144,6 +159,11 @@ $border:.2rem solid rgba(255,255,255,.3);
     .principal{
         #slideshow{
             height: 400px;
+            .titulo{
+                font-size: 2rem;
+                line-height: 30px;
+                bottom: 80px;
+            }
         }
     }
 
