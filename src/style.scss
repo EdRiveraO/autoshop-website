@@ -1,6 +1,7 @@
 
 
 $primarycolor:#f9f4f4;
+$backgroundcolor:#de955f;
 $navbarcolor:#f9f4f47a;
 $secondarycolor: rgb(119, 119, 119);
 $black : #000;
@@ -66,43 +67,63 @@ $border:.2rem solid rgba(255,255,255,.3);
     
  }
 
- .content{
-     display: flex;
-     height: 550px;
-     background-color: #D0AEAE;
-     .slide{
-         width: 10%;
-         background-color: $slidecolor;
-         opacity: 1%;
-         justify-content: center;
-         #flecha{
-             width: 100%;
-         }
-     }
-     .auto{
-         width: 80%;
-         padding: 20px;
-         margin: 4rem 2%;
-         text-align: center;
-         img{
-            width: 70%;
-        }   
-        p{
-            font-family: 'Rajdhani', sans-serif;
-            line-height: 100px;
-            width: 70%;
-            height: 20%;
-            font-size: 7rem;
-            text-align: left;
-            color: white;
-            margin-top: 5px;
-            transform: translateY(-10rem);
-            z-index: 1000;
+ .principal{
+    position: relative;
+    overflow: hidden;
+    #slideshow{
+        position: relative;
+        height: 580px;
+        padding: 5px;
+        align-items: center;
+        width: 100%;
+        background-color: $backgroundcolor;
+        img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            /* padding: 50px; */
+            object-fit: scale-down;
         }
-     }
+        #img2{
+            display: none;
+            .active{
+                left: 0 !important;
+            }
+        }
+    }
+    #indicadores{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 40px;
+        z-index: 3;
+        .circles{
+            border: white 2px solid;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin: 0 5px 0 5px;
+            background-color: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .resaltado{
+            background-color: rgb(0, 0, 0);
+            transition: background-color .8s;
+        }
+    }
  }
 
-
+ /* font-family: 'Rajdhani', sans-serif;
+ line-height: 100px;
+ width: 70%;
+ height: 20%;
+ font-size: 7rem;
+ text-align: left;
+ color: white;
+ margin-top: 5px;
+ transform: translateY(-10rem);
+ z-index: 1000; */
 /*  Media queris */
 
 @media (max-width:1200px){
@@ -110,12 +131,9 @@ $border:.2rem solid rgba(255,255,255,.3);
     .header{
        padding:1rem;
     }
-    .content{
-        height: 400px;
-        .auto{
-            p{
-                font-size: 4rem;
-            }
+    .principal{
+        #slideshow{
+            height: 500px;
         }
     }
  
@@ -123,6 +141,11 @@ $border:.2rem solid rgba(255,255,255,.3);
  }
 
  @media (max-width:991px){
+    .principal{
+        #slideshow{
+            height: 400px;
+        }
+    }
 
     .header{
         justify-content: flex-end;

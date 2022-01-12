@@ -53,56 +53,78 @@ header .navbar #btn {
   font-weight: bold;
 }
 
-.content {
-  display: flex;
-  height: 550px;
-  background-color: #D0AEAE;
+.principal {
+  position: relative;
+  overflow: hidden;
 }
-.content .slide {
-  width: 10%;
-  background-color: rgba(0, 0, 0, 0.336);
-  opacity: 1%;
-  justify-content: center;
-}
-.content .slide #flecha {
+.principal #slideshow {
+  position: relative;
+  height: 580px;
+  padding: 5px;
+  align-items: center;
   width: 100%;
+  background-color: #de955f;
 }
-.content .auto {
-  width: 80%;
-  padding: 20px;
-  margin: 4rem 2%;
+.principal #slideshow img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* padding: 50px; */
+  object-fit: scale-down;
+}
+.principal #slideshow #img2 {
+  display: none;
+}
+.principal #slideshow #img2 .active {
+  left: 0 !important;
+}
+.principal #indicadores {
+  width: 100%;
   text-align: center;
+  position: absolute;
+  bottom: 40px;
+  z-index: 3;
 }
-.content .auto img {
-  width: 70%;
+.principal #indicadores .circles {
+  border: white 2px solid;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.content .auto p {
-  font-family: "Rajdhani", sans-serif;
-  line-height: 100px;
-  width: 70%;
-  height: 20%;
-  font-size: 7rem;
-  text-align: left;
-  color: white;
-  margin-top: 5px;
-  transform: translateY(-10rem);
-  z-index: 1000;
+.principal #indicadores .resaltado {
+  background-color: black;
+  transition: background-color 0.8s;
 }
 
+/* font-family: 'Rajdhani', sans-serif;
+line-height: 100px;
+width: 70%;
+height: 20%;
+font-size: 7rem;
+text-align: left;
+color: white;
+margin-top: 5px;
+transform: translateY(-10rem);
+z-index: 1000; */
 /*  Media queris */
 @media (max-width: 1200px) {
   .header {
     padding: 1rem;
   }
 
-  .content {
-    height: 400px;
-  }
-  .content .auto p {
-    font-size: 4rem;
+  .principal #slideshow {
+    height: 500px;
   }
 }
 @media (max-width: 991px) {
+  .principal #slideshow {
+    height: 400px;
+  }
+
   .header {
     justify-content: flex-end;
     gap: 2rem;
