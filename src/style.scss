@@ -1,6 +1,7 @@
 
 
-$primarycolor:#f9f4f4;
+$primarycolorheader:#ffffff8f;
+$secondarycolorheader:#f9f4f4e1; 
 $backgroundcolor:#de955f;
 $orange: #FE855F;
 $navbarcolor:#f9f4f47a;
@@ -25,12 +26,15 @@ $border:.2rem solid rgba(255,255,255,.3);
     position: fixed;
     top:0; left:0; right:0;
     z-index: 1000;
-    background-color: $primarycolor;
+    background-color: $primarycolorheader;
     padding:1rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap:1rem;
+    &:hover{
+        background-color: $secondarycolorheader;
+    }
     #menu-btn{
         display: none;
     }

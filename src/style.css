@@ -16,12 +16,15 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #f9f4f4;
+  background-color: #ffffff8f;
   padding: 1rem 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+header:hover {
+  background-color: #f9f4f4e1;
 }
 header #menu-btn {
   display: none;

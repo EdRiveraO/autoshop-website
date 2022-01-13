@@ -102,7 +102,13 @@ addEventListener('DOMContentLoaded', ()=>{
    }
    setInterval(slideshow,5000)
 
-   
+   slideshowc.onmousemove = function(){
+      var x = event.clientX * 2/ window.innerWidth + "%";
+      var y = event.clientY * 2/ window.innerHeight + "%";
+      img1.style.left = x;
+      img1.style.top = y;
+      console.log(event.clientX);
+   }
  
    
 }
@@ -156,3 +162,15 @@ function getAverageRGB(imgEl) {
    return rgb;
 
 }
+/* var imagen = document.querySelector('.img');
+
+slideshowc.onmousemove = function(){
+   var x = event.clientX * 100/ window.innerWidth + "%";
+   var y = event.clientY * 100/ window.innerHeight + "%";
+   console.log(x);
+
+   for ( var i=0; i<2; i++){
+      imagen.style.left = x;
+   }
+
+} */
