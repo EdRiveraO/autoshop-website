@@ -29,8 +29,8 @@ addEventListener('DOMContentLoaded', ()=>{
    const imagenes =['./img/car.png','./img/car1.png',
    './img/car2.png','./img/car4.png']
 
-   const titulos =['TOYOTA </br> ILUX 2018','SUZUKI  </br>SWIFT 2019',
-   'HONDA  </br> CIVIC 2018','RENAULT  </br> KWID 2016']
+   const titulos =['TOYOTA </br> HILUX 2018','SUZUKI  </br>SWIFT 2019',
+   'CHEVROLET  </br> COLORADO 2020','RENAULT  </br> KWID 2016']
 
 
    let i =1
@@ -76,7 +76,7 @@ addEventListener('DOMContentLoaded', ()=>{
    
 
    const slideshow = ()=>{
-      console.log(carTitle.innerHTML);
+     
       carTitle.innerHTML=titulos[i];
 
 
@@ -96,9 +96,6 @@ addEventListener('DOMContentLoaded', ()=>{
          img2.classList.remove('active')
 
          rgb= getAverageRGB(img1);
-         slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')';
-
-         rgb= getAverageRGB(img2);
          slideshowc.style.backgroundColor='rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ','+ .9+')';
 
       }, 100)
